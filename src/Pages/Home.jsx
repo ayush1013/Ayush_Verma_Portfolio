@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Image, Link, Text } from "@chakra-ui/react";
 import React from "react";
 
 const Home = () => {
@@ -9,11 +9,19 @@ const Home = () => {
       pt={{ base: "50px", md: "60px", lg: "65px" }}
       // border="1px solid red"
     >
-      <Flex w="100%" h="100%" flexDirection={{ base: "column", md: "row", lg: "row" }} >
+      <Flex
+        w="100%"
+        h="100%"
+        flexDirection={{ base: "column", md: "row", lg: "row" }}
+      >
         <Box
           w={{ base: "100%", md: "50%", lg: "50%" }}
           h={{ base: "40%", md: "100%", lg: "100%" }}
-          borderBottom={{base:"none", md:"1px dashed #0BC5EA", lg:"1px dashed #0BC5EA"}}
+          borderBottom={{
+            base: "none",
+            md: "1px dashed #0BC5EA",
+            lg: "1px dashed #0BC5EA",
+          }}
           position="relative"
         >
           <Box
@@ -30,23 +38,31 @@ const Home = () => {
             <Text fontSize={{ base: "32px", md: "32px", lg: "50px" }}>
               I'm Ayush Verma
             </Text>
-            <Text fontSize={{ base: "14px", md: "14px", lg: "20px" }} color={"#00ACD5"}>
+            <Text
+              fontSize={{ base: "14px", md: "14px", lg: "20px" }}
+              color={"#00ACD5"}
+            >
               Aspiring Full Stack Web Developer
             </Text>
-            <Text fontSize={{ base: "14px", md: "14px", lg: "20px" }} color={"#00ACD5"}>
+            <Text
+              fontSize={{ base: "14px", md: "14px", lg: "20px" }}
+              color={"#00ACD5"}
+            >
               at Masai School, Banglore
             </Text>
 
             <Flex m="auto" mt="20px">
-              <Button
-                // w="fit-content"
-                size="sm"
-                borderRightRadius={"none"}
-                colorScheme="cyan"
-                shadow={"md"}
-              >
-                MORE ABOUT ME →
-              </Button>
+              <Link href="#about">
+                <Button
+                  // w="fit-content"
+                  size="sm"
+                  borderRightRadius={"none"}
+                  colorScheme="cyan"
+                  shadow={"md"}
+                >
+                  MORE ABOUT ME →
+                </Button>
+              </Link>
               <Button
                 // w="fit-content"
                 size="sm"

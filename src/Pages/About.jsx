@@ -8,7 +8,7 @@ const About = () => {
       w="100%"
       pt={{ base: "50px", md: "60px", lg: "75px" }}
       // border="1px solid red"
-      borderBottom="1px dashed #0BC5EA"
+      borderBottom={{base:"none", md:"1px dashed #0BC5EA", lg:"1px dashed #0BC5EA"}}
     >
       <Heading fontSize={{ base: "20px", md: "20px", lg: "30px" }} > About Me </Heading>
       <Flex
@@ -34,7 +34,8 @@ const About = () => {
           textAlign={"left"}
           w={{ base: "100%", md: "65%", lg: "65%" }}
           p="10px"
-          shadow={"lg"}
+          // shadow={"lg"}
+          border="1px dashed #0BC5EA" 
         >
           <Text>Greetings,</Text>
           <Text>
