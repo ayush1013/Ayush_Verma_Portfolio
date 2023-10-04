@@ -64,7 +64,7 @@ const tools = [
 const Skills = () => {
   return (
     <Box
-      h={{ base: "390px", md: "500px", lg: "100vh" }}
+      h={{ base: "390px", md: "500px", lg: "592px" }}
       w="100%"
       pt={{ base: "50px", md: "60px", lg: "75px" }}
       // border="1px solid red"

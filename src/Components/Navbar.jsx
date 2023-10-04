@@ -48,7 +48,7 @@ const Navbar = () => {
         top="0"
         justifyContent={"space-between"}
       >
-        <Link fontWeight="500" fontSize={"lg"}>
+        <Link href="#home" fontWeight="500" fontSize={"lg"} color="#081822" >
           Ayush Verma
         </Link>
         <Flex
@@ -56,43 +56,50 @@ const Navbar = () => {
           justifyContent={"space-between"}
           ml={{ base: "10%", md: "10%", lg: "16%" }}
           cursor={"pointer"}
-          w={{ base: "40%", md: "50%", lg: "50%" }}
+          w={{ base: "40%", md: "55%", lg: "55%" }}
           fontWeight="500"
           // border="1px solid black"
           alignItems={"center"}
-          fontSize={{ base: "40%", md: "14px", lg: "md" }}
+          fontSize={{ base: "40%", md: "13px", lg: "15px" }}
         >
           <Link
             href="#home"
-            color={section === "sec1" ? "teal" : "black"}
+            color={section === "sec1" ? "red" : "#081822"}
             onClick={() => handleSection("sec1")}
           >
             Home
           </Link>
           <Link
             href="#about"
-            color={section === "sec2" ? "teal" : "black"}
+            color={section === "sec2" ? "red" : "#081822"}
             onClick={() => handleSection("sec2")}
           >
             About
           </Link>
           <Link
             href="#skills"
-            color={section === "sec3" ? "teal" : "black"}
+            color={section === "sec3" ? "red" : "#081822"}
             onClick={() => handleSection("sec3")}
           >
             Skills
           </Link>
           <Link
             href="#projects"
-            color={section === "sec4" ? "teal" : "black"}
+            color={section === "sec4" ? "red" : "#081822"}
             onClick={() => handleSection("sec4")}
           >
             Projects
           </Link>
           <Link
+            href="#home"
+            color={section === "sec6" ? "red" : "#081822"}
+            onClick={() => handleSection("sec6")}
+          >
+            Github
+          </Link>
+          <Link
             href="#contact"
-            color={section === "sec5" ? "teal" : "black"}
+            color={section === "sec5" ? "red" : "#081822"}
             onClick={() => handleSection("sec5")}
           >
             Contact
@@ -101,7 +108,8 @@ const Navbar = () => {
             <Button
               p="0px"
               m="0px"
-              fontSize={{ base: "40%", md: "14px", lg: "md" }}
+              color="#081822"
+              fontSize={{ base: "40%", md: "13px", lg: "15px" }}
               variant={"none"}
               onClick={() =>
                 window.open(

@@ -4,7 +4,7 @@ import React from "react";
 const Home = () => {
   return (
     <Box
-      h={{ base: "650px", md: "450px", lg: "100vh" }}
+      h={{ base: "650px", md: "450px", lg: "592px" }}
       w="100%"
       pt={{ base: "50px", md: "60px", lg: "65px" }}
       // border="1px solid red"

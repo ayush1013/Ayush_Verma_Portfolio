@@ -4,7 +4,7 @@ import React from "react";
 const About = () => {
   return (
     <Box
-      h={{ base: "780px", md: "450px", lg: "100vh" }}
+      h={{ base: "780px", md: "450px", lg: "592px" }}
       w="100%"
       pt={{ base: "50px", md: "60px", lg: "75px" }}
       // border="1px solid red"
