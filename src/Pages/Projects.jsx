@@ -1,4 +1,4 @@
-import { Box, Grid, Heading, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Grid, Heading, Image, Link, Text } from "@chakra-ui/react";
 import React from "react";
 
 const projects = [
@@ -73,29 +73,64 @@ const Projects = () => {
 
       <Grid
         w="80%"
-        gap="100px"
+        gap="50px"
+        rowGap={"40px"}
         gridTemplateColumns={"repeat(2, 1fr)"}
         margin="auto"
-        mt="50px"
+        mt="40px"
       >
         {projects.map((elem, index) => (
-          <Box key={index} shadow={"md"} p="20px" borderRadius={"10px"}>
-            <Image w="100%" m="auto" src={elem.image} />
-            <Box mt="20px">
+          <Box
+            key={index}
+            shadow={"md"}
+            p="10px"
+            pb="50px"
+            borderRadius={"10px"}
+            bgColor="#E2EAEE"
+            color="#2E353B"
+            position={"relative"}
+          >
+            <Link href={elem.liveLink} target="_blank" >
+            <Image w="100%" m="auto" src={elem.image} shadow={"md"} borderTopRadius={"10px"} />
+            </Link>
+            <Box mt="10px" textAlign={"left"}>
               <Text
                 fontWeight="500"
-                textAline="left"
-                fontSize={{ base: "16px", md: "20px", lg: "24px" }}
+                fontSize={{ base: "16px", md: "20px", lg: "20px" }}
+                color="#2E353B"
               >
                 {elem.title}
               </Text>
-              <Text color="#00ACD5">{elem.discription}</Text>
-              <Grid>
-                {elem.techStacks?.map((el, i) => (
-                  <Text key={i}>{el}</Text>
-                ))}
-              </Grid>
+              <Text color="#2E353B" fontSize="14px">
+                {elem.discription}
+              </Text>
+
+              <Flex fontSize="14px" mt="10px" alignItems="baseline" gap="10px">
+                <Text
+                  display={"inline-block"}
+                  whiteSpace={"nowrap"}
+                  fontWeight={"500"}
+                >
+                  Tech Stack:
+                </Text>
+                <Box>
+                  {elem.techStacks?.map((el, i) => (
+                    <span key={i}>
+                      {" "}
+                      {el} {i != elem.techStacks.length - 1 && "|"}
+                    </span>
+                  ))}
+                </Box>
+              </Flex>
             </Box>
+            <Flex gap="20px" position={"absolute"} zindex="1" bottom={"10px"} right="10px"  >
+              <Link href={elem.githubLink} >
+              <Image src="icons8-github-100.png" w="32px" />
+              </Link>
+              <Link href={elem.liveLink} >
+              <Image src="icons8-share-64.png" w="32px" />
+              </Link>
+            </Flex>
           </Box>
         ))}
       </Grid>
