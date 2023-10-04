@@ -1,4 +1,4 @@
-import { Box, Heading } from "@chakra-ui/react";
+import { Box, Grid, Heading, Image, Text } from "@chakra-ui/react";
 import React from "react";
 
 const projects = [
@@ -57,7 +57,7 @@ const projects = [
 const Projects = () => {
   return (
     <Box
-      h={{ base: "380px", md: "500px", lg: "100vh" }}
+      h={{ base: "380px", md: "500px", lg: "200vh" }}
       w="100%"
       pt={{ base: "50px", md: "60px", lg: "75px" }}
       // border="1px solid red"
@@ -71,7 +71,34 @@ const Projects = () => {
         Projects
       </Heading>
 
-      <Flex></Flex>
+      <Grid
+        w="80%"
+        gap="100px"
+        gridTemplateColumns={"repeat(2, 1fr)"}
+        margin="auto"
+        mt="50px"
+      >
+        {projects.map((elem, index) => (
+          <Box key={index} shadow={"md"} p="20px" borderRadius={"10px"}>
+            <Image w="100%" m="auto" src={elem.image} />
+            <Box mt="20px">
+              <Text
+                fontWeight="500"
+                textAline="left"
+                fontSize={{ base: "16px", md: "20px", lg: "24px" }}
+              >
+                {elem.title}
+              </Text>
+              <Text color="#00ACD5">{elem.discription}</Text>
+              <Grid>
+                {elem.techStacks?.map((el, i) => (
+                  <Text key={i}>{el}</Text>
+                ))}
+              </Grid>
+            </Box>
+          </Box>
+        ))}
+      </Grid>
     </Box>
   );
 };
