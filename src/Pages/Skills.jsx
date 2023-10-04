@@ -69,7 +69,7 @@ const Skills = () => {
       pt={{ base: "50px", md: "60px", lg: "75px" }}
       // border="1px solid red"
       borderBottom={{
-        base: "none",
+        base: "1px dashed #0BC5EA",
         md: "1px dashed #0BC5EA",
         lg: "1px dashed #0BC5EA",
       }}
