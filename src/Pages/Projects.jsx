@@ -77,7 +77,7 @@ const Projects = () => {
         gap={{ base: "30px", md: "40px", lg: "50px" }}
         rowGap={{ base: "20px", md: "40px", lg: "40px" }}
         gridTemplateColumns={{ base: "repeat(1,1fr)", md: "repeat(2,1fr)", lg: "repeat(2,1fr)" }}
-        margin="auto"
+        m="auto"
         mt={{ base: "20px", md: "40px", lg: "40px" }}
       >
         {projects.map((elem, index) => (

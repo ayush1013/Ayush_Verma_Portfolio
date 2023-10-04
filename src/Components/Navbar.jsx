@@ -22,6 +22,7 @@ import About from "../Pages/About";
 import Skills from "../Pages/Skills";
 import Projects from "../Pages/Projects";
 import Contact from "../Pages/Contact";
+import GitStats from "../Pages/GitStats";
 
 const Navbar = () => {
   const [section, setSection] = useState("");
@@ -91,7 +92,7 @@ const Navbar = () => {
             Projects
           </Link>
           <Link
-            href="#home"
+            href="#github"
             color={section === "sec6" ? "red" : "#081822"}
             onClick={() => handleSection("sec6")}
           >
@@ -229,6 +230,9 @@ const Navbar = () => {
         </section>
         <section id="projects">
           <Projects />
+        </section>
+        <section id="github">
+          <GitStats />
         </section>
         <section id="contact">
           <Contact />
