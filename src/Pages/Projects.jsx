@@ -57,12 +57,13 @@ const projects = [
 const Projects = () => {
   return (
     <Box
-      h={{ base: "380px", md: "500px", lg: "200vh" }}
+      h={{ base: "fit-content", md: "fit-content", lg: "fit-content" }}
       w="100%"
       pt={{ base: "50px", md: "60px", lg: "75px" }}
+      pb={{ base: "30px", md: "50px", lg: "50px" }}
       // border="1px solid red"
       borderBottom={{
-        base: "none",
+        base: "1px dashed #0BC5EA",
         md: "1px dashed #0BC5EA",
         lg: "1px dashed #0BC5EA",
       }}
@@ -72,12 +73,12 @@ const Projects = () => {
       </Heading>
 
       <Grid
-        w="80%"
-        gap="50px"
-        rowGap={"40px"}
-        gridTemplateColumns={"repeat(2, 1fr)"}
+        w={{ base: "95%", md: "90%", lg: "80%" }}
+        gap={{ base: "30px", md: "40px", lg: "50px" }}
+        rowGap={{ base: "20px", md: "40px", lg: "40px" }}
+        gridTemplateColumns={{ base: "repeat(1,1fr)", md: "repeat(2,1fr)", lg: "repeat(1,1fr)" }}
         margin="auto"
-        mt="40px"
+        mt={{ base: "20px", md: "40px", lg: "40px" }}
       >
         {projects.map((elem, index) => (
           <Box
@@ -124,10 +125,10 @@ const Projects = () => {
               </Flex>
             </Box>
             <Flex gap="20px" position={"absolute"} zindex="1" bottom={"10px"} right="10px"  >
-              <Link href={elem.githubLink} >
+              <Link href={elem.githubLink} target="_blank" >
               <Image src="icons8-github-100.png" w="32px" />
               </Link>
-              <Link href={elem.liveLink} >
+              <Link href={elem.liveLink} target="_blank" >
               <Image src="icons8-share-64.png" w="32px" />
               </Link>
             </Flex>
